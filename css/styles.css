@@ -1,0 +1,175 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: rgb(14, 17, 17);
+  }
+canvas {
+    display: block;
+    -webkit-mask:linear-gradient(180deg, rgba(14, 17, 17,0) 0%, rgba(14, 17, 17,1) 50%, rgba(14, 17, 17,1) 100%);
+    mask:linear-gradient(180deg, rgba(14, 17, 17,0) 0%, rgba(14, 17, 17,1) 50%, rgba(14, 17, 17,1) 100%);;
+  }
+
+.intro {
+    padding-top: 10vh;
+}
+h1 { font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 35px; font-style: normal; font-variant: normal; 
+    font-weight: 700; line-height: 39px; color: snow; white-space: pre-wrap;
+} 
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadein2 {
+    0% {
+        opacity: 0;
+        transform: translateY(5vh);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes move-bg {
+    to {
+      background-position: var(400%) 0;
+    }
+  }
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.anim {
+    font-size: 85px;
+    line-height: 90px;
+    padding-top: 10vh;
+    padding-left: 2vw;
+    padding-right: 4vw;
+    animation: fadein 1.2s ease-in;
+}
+
+.anim.ii {
+    animation-delay: .6s;
+    animation: fadein2 .6s ease-in;
+    animation-fill-mode: forwards;
+    border-bottom: 3px snow;
+}
+.anim-grad {
+  font-size: 85px;
+  line-height: 90px;
+  padding-top: 10vh;
+  padding-left: 2vw;
+  padding-right: 4vw;
+  background: linear-gradient(30deg, #ec5729 0%, rgba(151,236,41,1) 40%, #3d5dff 95%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+
+}
+
+.anim-grad.inout {
+    animation: fadeinout ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.anim-grad.first {
+    animation-duration: 4s;
+}
+/*
+.anim-grad.second {
+    opacity: 0;
+    animation-delay: 4s;
+    animation-duration: 12s;
+}
+
+.anim-grad.third {
+    opacity: 0;
+    animation-delay: 8s;
+    animation-duration: 12s;
+}*/
+
+h3 { font-family: monaco, Consolas, 
+        "Lucida Console", monospace; font-size: 14px; font-style: normal; 
+        font-variant: normal; font-weight: 700; line-height: 15.4px; color: snow;} 
+
+p { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 14px; 
+        font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; color: snow;} 
+
+blockquote { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 21px; 
+    font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; color: snow;} 
+
+pre { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 13px; font-style: normal; 
+    font-variant: normal; font-weight: 400; line-height: 18.5714px; color: snow;}
+
+.topnav {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    margin-top: 2%;
+    margin-left: 80vw;
+    margin-right: 0;
+    animation: fadein 1.2s ease-in;
+}
+                                         
+.topnav a {
+    color: snow;
+    text-decoration:none;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-bottom: .2vh;
+    border-bottom: 6px solid snow;
+    font-size: 30px;
+    display: inline;
+}
+
+.topnav a:hover {
+    color: #D84315;
+    border-bottom-color: #D84315;
+}
+
+.topnav a.active {
+    color: snow;
+    transition: color .5s, border-bottom .5s;
+    border-bottom: 1px solid snow;
+    padding-bottom: 5px;
+}
+
+.topnav a.active:hover {
+    color: #D84315;
+    border-bottom: 1px solid #D84315;
+}
+
+.topnav ul {
+    float: left;
+    font-size: 24px;
+    color: snow;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vbh;
+}
