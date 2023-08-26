@@ -56,28 +56,30 @@ h1 { font-family: 'IBM Plex Sans Arabic', sans-serif;
     visibility: visible;
 }
 
-.anim {
+
+span {
     font-size: 85px;
     line-height: 90px;
     padding-top: 10vh;
     padding-left: 2vw;
     padding-right: 4vw;
-    animation: fadein 1.2s ease-in;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-style: normal; font-variant: normal; 
+    font-weight: 700; 
 }
-
 .anim.ii {
     animation-delay: .6s;
     animation: fadein2 .6s ease-in;
     animation-fill-mode: forwards;
     border-bottom: 3px snow;
 }
-.anim-grad {
-    display: grid;
-  font-size: 85px;
-  line-height: 90px;
-  padding-top: 10vh;
-  padding-left: 2vw;
-  padding-right: 4vw;
+
+span anim {
+    animation: fadein 1.2s ease-in;
+    color: snow;
+}
+
+span anim-grad {
   background: linear-gradient(30deg, #ec5729 0%, rgba(151,236,41,1) 40%, #3d5dff 95%);
   color: transparent;
   -webkit-background-clip: text;
@@ -94,6 +96,15 @@ h1 { font-family: 'IBM Plex Sans Arabic', sans-serif;
 .anim-grad.first {
     animation-duration: 4s;
 }
+
+.gridwrapper {
+    display: grid;
+    position: absolute; z-index: 1;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
 /*
 .anim-grad.second {
     opacity: 0;
