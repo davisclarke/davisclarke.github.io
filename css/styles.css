@@ -60,8 +60,8 @@ h1 { font-family: 'IBM Plex Sans Arabic', sans-serif;
 span {
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     font-style: normal; font-variant: normal; 
-    font-size: 85px;
-    line-height: 90px;
+    font-size: 87.5px;
+    line-height: 95px;
     padding-top: 19vh;
     padding-left: 2vw;
     padding-right: 4vw;
@@ -136,8 +136,8 @@ pre { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 13p
     z-index: 2;
     width: 100%;
     margin-top: 2%;
-    margin-left: 80vw;
-    margin-right: 0;
+    margin-left: 75vw;
+    margin-right: 2vw;
     animation: fadein 1.2s ease-in;
 }
                                          
