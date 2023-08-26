@@ -58,13 +58,13 @@ h1 { font-family: 'IBM Plex Sans Arabic', sans-serif;
 
 
 span {
-    font-size: 85px;
-    line-height: 90px;
-    padding-top: 10vh;
-    padding-left: 2vw;
-    padding-right: 4vw;
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     font-style: normal; font-variant: normal; 
+    font-size: 85px;
+    line-height: 90px;
+    padding-top: 19vh;
+    padding-left: 2vw;
+    padding-right: 4vw;
     font-weight: 700; 
 }
 .anim.ii {
@@ -84,8 +84,7 @@ span anim-grad {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-
-
+  animation: fadein 1.2s ease-in;
 }
 
 .anim-grad.inout {
