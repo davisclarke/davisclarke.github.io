@@ -72,6 +72,7 @@ h1 { font-family: 'IBM Plex Sans Arabic', sans-serif;
     border-bottom: 3px snow;
 }
 .anim-grad {
+    display: grid;
   font-size: 85px;
   line-height: 90px;
   padding-top: 10vh;
@@ -136,10 +137,13 @@ pre { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 13p
     margin-left: 1%;
     margin-right: 1%;
     padding-bottom: .2vh;
-    border-bottom: 6px solid snow;
+    border-bottom: 6px solid;
+    border-bottom-color: snow;
     font-size: 30px;
-    display: inline;
-}
+    display: inline; 
+    transition: border-bottom-color .5s ease-out;
+    -webkit-transition: border-bottom-color .5s ease-out;
+} 
 
 .topnav a:hover {
     color: #D84315;
@@ -156,6 +160,8 @@ pre { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 13p
 .topnav a.active:hover {
     color: #D84315;
     border-bottom: 1px solid #D84315;
+    transition: color 2s ease-out;
+    transition: border-bottom-color 2s ease-out;
 }
 
 .topnav ul {

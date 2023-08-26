@@ -4,8 +4,8 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const gridSize = 20; // Adjust this for the desired grid size
-const orbSize =5; // Adjust this for the desired orb size
+const gridSize = 15; // Adjust this for the desired grid size
+const orbSize =4; // Adjust this for the desired orb size
 const orbs = [];
 
 
