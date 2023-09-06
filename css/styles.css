@@ -4,11 +4,32 @@ body, html {
     overflow: hidden;
     background: rgb(14, 17, 17);
   }
+
+@media only screen and (max-width: 480px){ 
+    span.title {
+        font-size: 50px;
+        line-height: 50px;
+        padding-top: 15vh;
+        padding-left: 2vw;
+        padding-right: 4vw;
+    }
+    canvas {
+        -webkit-mask:linear-gradient(180deg, rgba(14, 17, 17,0) 0%, rgba(14, 17, 17,1) 50%, rgba(14, 17, 17,1) 100%);
+        mask:linear-gradient(180deg, rgba(14, 17, 17,0) 0%, rgba(14, 17, 17,1) 50%, rgba(14, 17, 17,1) 100%);;
+    }
+}
+
 canvas {
     display: block;
     -webkit-mask:linear-gradient(180deg, rgba(14, 17, 17,0) 0%, rgba(14, 17, 17,1) 50%, rgba(14, 17, 17,1) 100%);
     mask:linear-gradient(180deg, rgba(14, 17, 17,0) 0%, rgba(14, 17, 17,1) 50%, rgba(14, 17, 17,1) 100%);;
   }
+
+canvas.info {
+    display: block;
+    -webkit-mask:linear-gradient(60deg, rgba(14, 17, 17,1) 0%, rgba(14, 17, 17,1) 10%, rgba(14, 17, 17,0) 12%, rgba(14, 17, 17,0) 55%, rgba(14, 17, 17,1) 70%, rgba(14, 17, 17,0) 72%, rgba(14, 17, 17,0) 87%, rgba(14, 17, 17,1) 90%, rgba(14, 17, 17,1) 100%);
+    mask:linear-gradient(90deg, rgba(14, 17, 17,1) 0%, rgba(14, 17, 17,1) 10%, rgba(14, 17, 17,0) 12%, rgba(14, 17, 17,0) 87%, rgba(14, 17, 17,1) 90%, rgba(14, 17, 17,1) 100%);    
+}
 
 .intro {
     padding-top: 10vh;
@@ -79,6 +100,10 @@ span anim {
     color: snow;
 }
 
+span.title {
+    max-width:100%;height:auto;
+}
+
 span anim-grad {
   background: linear-gradient(30deg, #ec5729 0%, rgba(151,236,41,1) 40%, #3d5dff 95%);
   color: transparent;
@@ -121,8 +146,8 @@ h3 { font-family: monaco, Consolas,
         "Lucida Console", monospace; font-size: 14px; font-style: normal; 
         font-variant: normal; font-weight: 700; line-height: 15.4px; color: snow;} 
 
-p { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 14px; 
-        font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; color: snow;} 
+p { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 15px; 
+        font-style: normal; font-variant: normal; font-weight: 400; line-height: 25px; color: snow;} 
 
 blockquote { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 21px; 
     font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; color: snow;} 
@@ -136,42 +161,26 @@ pre { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 13p
     z-index: 2;
     width: 100%;
     margin-top: 2%;
-    margin-left: 75vw;
-    margin-right: 2vw;
+    margin-left: 55vw;
     animation: fadein 1.2s ease-in;
 }
                                          
 .topnav a {
     color: snow;
     text-decoration:none;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin-left: .75%;
+    margin-right: .75%;
     padding-bottom: .2vh;
     border-bottom: 6px solid;
     border-bottom-color: snow;
     font-size: 30px;
     display: inline; 
-    transition: border-bottom-color .5s ease-out;
-    -webkit-transition: border-bottom-color .5s ease-out;
+    transition: all .5s ease-out;
 } 
 
 .topnav a:hover {
     color: #D84315;
     border-bottom-color: #D84315;
-}
-
-.topnav a.active {
-    color: snow;
-    transition: color .5s, border-bottom .5s;
-    border-bottom: 1px solid snow;
-    padding-bottom: 5px;
-}
-
-.topnav a.active:hover {
-    color: #D84315;
-    border-bottom: 1px solid #D84315;
-    transition: color 2s ease-out;
-    transition: border-bottom-color 2s ease-out;
 }
 
 .topnav ul {
@@ -184,8 +193,55 @@ pre { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 13p
     padding: 0;
 }
 
+.topnav a.home {
+    text-decoration:none;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-bottom: .2vh;
+    border-bottom: 6px solid;
+    font-size: 30px;
+    display: inline; 
+    background: linear-gradient(30deg, #ec5729 0%, rgba(151,236,41,1) 40%, #3d5dff 95%);
+    color: snow;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: all ease-out .5s;
+}
+.topnav a.home:hover {
+  color: transparent;
+  border-bottom-color: #D84315;
+}
+
 .wrapper {
   position: relative;
   width: 100vw;
   height: 100vbh;
+}
+
+.content {
+    z-index: 1;
+    position: absolute;
+    margin: 20vh 15vw 10vh;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(1,100%);
+    column-gap: 5vw;
+}
+
+.pic {
+    grid-column: 2;
+}
+
+.bio {
+    grid-column: 1;
+}
+
+.biobar{
+    border-bottom: snow;
+    border-bottom: 6px solid;
+    display: inline;
+}
+
+p.biopage {
+    padding-top: 2.5vh;
 }

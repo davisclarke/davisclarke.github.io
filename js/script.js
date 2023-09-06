@@ -7,7 +7,7 @@ canvas.height = window.innerHeight;
 const gridSize = 15; // Adjust this for the desired grid size
 const orbSize =4; // Adjust this for the desired orb size
 const orbs = [];
-
+color=`#D84315`
 
 function makeCircle(x, y, size, color, alpha) {
   canvas.beginPath();
@@ -19,12 +19,12 @@ function makeCircle(x, y, size, color, alpha) {
 }
 
 class Orb {
-  constructor(x, y) {
+  constructor(x, y, color) {
     this.x = x;
     this.y = y;
     this.targetX = x;
     this.targetY = y;
-    this.color = `#D84315`;
+    this.color = color;
     this.isMoving = Math.random() < .9; // Randomly decide if the orb should move
     if (this.isMoving) {
       this.opacity=0.0; this.speed=Math.random(); this.direction=1;
@@ -59,7 +59,7 @@ class Orb {
 // Create grid of orbs
 for (let x = gridSize / 2; x < canvas.width; x += gridSize) {
   for (let y = gridSize / 2; y < canvas.height; y += gridSize) {
-    orbs.push(new Orb(x, y));
+    orbs.push(new Orb(x, y, color));
   }
 }
 
