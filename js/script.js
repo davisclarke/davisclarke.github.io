@@ -25,12 +25,12 @@ class Orb {
     this.targetX = x;
     this.targetY = y;
     this.color = color;
-    this.isMoving = Math.random() < .9; // Randomly decide if the orb should move
+    this.isMoving = Math.random() < .8; // Randomly decide if the orb should move
     if (this.isMoving) {
       this.opacity=0.0; this.speed=Math.random(); this.direction=1;
       this.target=.4+(.5*Math.random());
     } else {this.opacity=.4+(.5*Math.random())};
-    this.exists = Math.random() < .3;
+    this.exists = Math.random() < .40;
     // this.moveStartTime = Date.now() + Math.random() * 2000; // Initial random movement duration
   }
 
