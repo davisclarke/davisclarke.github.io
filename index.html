@@ -14,17 +14,21 @@
 
 <body>
   <div>
-    <div class="wrapper">
+    <div class="wrapper" id="home">
 
       <!-- Navb -->
       <div class="drop">
         <input type="checkbox" id="touch" >
       <label for="touch" class="fa fa-bars label fadein" style="font-size: 40px;"></label>
         <div class="slide">
-          <a href="research.html">Research & Projects</a>
-          <a href="contact.html">Contact</a>
-          <a href="#scroll">About</a>
-          <a href="index.html"><i class="fa fa-home" style="font-size: 30px;"></i></a>
+          <a href="research.html">Research & Projects</a>          
+          <input type="checkbox" id="touch">
+          <label for="touch" onclick="location.href='#scroll'"><a>About</a>
+          </label>
+          <input type="checkbox" id="touch">
+          <label for="touch" onclick="location.href='#home'">
+            <a><i class="fa fa-home" style="font-size: 30px;"></i></a>
+          </label>
         </div>
 
       </div>

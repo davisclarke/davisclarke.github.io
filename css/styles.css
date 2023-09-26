@@ -257,6 +257,10 @@ p.biopage {
 #scroll {
 
 }
+
+#home {
+    
+}
 .slide a {
     background: linear-gradient(30deg, #ec5729 0%, rgba(151,236,41,1) 5%, #3d5dff 20%);
     background-clip: text;
@@ -283,12 +287,9 @@ p.biopage {
     color: snow;
     transition: all .5s ease-out;
 }
-
 #touch:checked ~ .slide  {height: 60vh;} 
 #touch:checked + .label {transform: rotate(90deg); color: transparent;}
-#touch:checked ~ .slide:has(>a:active )  {
-    height: 0px
-}
+
 @media only screen and (max-width: 480px){ 
     span.title {
         font-size: 50px;
