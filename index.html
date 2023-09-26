@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Davis CLarke</title>
+  <title>Davis Clarke</title>
   <link href="css/styles.css" rel="stylesheet">
   <link href="favicon.ico" type="image/x-icon" rel="shortcut icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,35 +13,64 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div>
+    <div class="wrapper">
 
-    <!-- Navb -->
-    <div class="drop">
-      <input type="checkbox" id="touch" >
+      <!-- Navb -->
+      <div class="drop">
+        <input type="checkbox" id="touch" >
       <label for="touch" class="fa fa-bars label fadein" style="font-size: 40px;"></label>
-      <div class="slide">
-        <a href="projects.html">Projects</a>
-        <a href="research.html">Research</a>
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
-        <a href="index.html"><i class="fa fa-home" style="font-size: 30px;"></i></a>
+        <div class="slide">
+          <a href="research.html">Research & Projects</a>
+          <a href="contact.html">Contact</a>
+          <a href="#scroll">About</a>
+          <a href="index.html"><i class="fa fa-home" style="font-size: 30px;"></i></a>
+        </div>
+
       </div>
 
-    </div>
+      <!-- Header -->
+      <div style="position: absolute; z-index:1; ">
+          <span style="display:inline-block;" class="title"><anim-grad>Quantum Information</anim-grad><anim> and </anim>
+            <anim-grad>Error Correction</anim-grad><anim> with Ultracold Atoms</anim></span>
+      </div>
 
-    <!-- Header -->
-    <div style="position: absolute; z-index:1; ">
-        <span style="display:inline-block;" class="title"><anim-grad>Quantum Information</anim-grad><anim> and </anim>
-          <anim-grad>Error Correction</anim-grad><anim> with Ultracold Atoms</anim></span>
-    </div>
+      <!-- Animation -->
+      <canvas id="canvas" ></canvas>
+      <script src="js/script.js" style="z-index: 2; "></script>
 
-    <!-- Animation -->
-    <canvas id="canvas" style="width: 100vw; height: 100vh;"></canvas>
-    <script src="js/script.js" style="z-index: 2; "></script>
+    </div>
 
   </div>
-  <!-- Content -->
+  <div class="wrapper" id="scroll">
+    <!-- Navb -->
+    <div class="content">
 
+      <!--img src="" alt="" class="pic"-->
+      <div>
+        <h1 class="biobar">About Davis Clarke &nbsp &nbsp</h1>
+        <p class="biopage">I am an independent researcher that is broadly interested in neutral atoms, quantum information science, 
+          and quantum error correction. My research includes work on exploring hardware-efficient implementations of 
+          various quantum algorithms (espescially quantum variational and ground-state eigensolvers), and 
+          harnessing quantum networks for quantum computing.
+        </p>
+        <div class="bio">
+          <h2 style="text-decoration: underline;">Contact</h2>
+          <p> 
+            Email: clarked126 [at] gmail.com<br />
+            Cell: (919)-987-5300<br />
+            <a href=""><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 30px; color: snow;"></i></a>
+            <a href="https://github.com/davisclarke"><i class="fa fa-github" aria-hidden="true" style="font-size: 30px; color: snow;"></i></a> <br />
+          </p>
+        </div>
+        <br />
+      </div>
+      <div class="bio">        
+        <h1 class="biobar">Publications</h1>
+        <br />
+      </div>
+    </div>
+  <!-- Content -->
 </body>
 
 </html>
