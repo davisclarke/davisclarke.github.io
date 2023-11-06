@@ -4,11 +4,11 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const gridSize = 15; // Adjust this for the desired grid size
+const gridSize = 20; // Adjust this for the desired grid size
 const orbSize =4; // Adjust this for the desired orb size
 const orbs = [];
-color=`#D84315`
-
+color='#ec5729'
+//color=`#fffafa`
 function makeCircle(x, y, size, color, alpha) {
   canvas.beginPath();
   //canvas.globalAlpha = alpha
@@ -17,20 +17,26 @@ function makeCircle(x, y, size, color, alpha) {
   canvas.fill();
   canvas.closePath();
 }
+//function makeCircle(x, y, size, color, alpha) {
+  //canvas.globalAlpha = alpha
+//  canvas.fillStyle = this.radgrad;
+//  canvas.fillRect(x, y, orbSize, orbSize);
+//}
 
 class Orb {
   constructor(x, y, color) {
     this.x = x;
     this.y = y;
-    this.targetX = x;
-    this.targetY = y;
+    this.radgrad = ctx.createRadialGradient(this.x+(orbSize/2), this.y+(orbSize/2), orbSize/8, this.x+(orbSize/2), this.y+(orbSize/2), orbSize/2);
+    this.radgrad.addColorStop(1, "rgb(14,17,17)");
+    this.radgrad.addColorStop(0, "snow");
     this.color = color;
     this.isMoving = Math.random() < .8; // Randomly decide if the orb should move
     if (this.isMoving) {
       this.opacity=0.0; this.speed=Math.random(); this.direction=1;
       this.target=.4+(.5*Math.random());
     } else {this.opacity=.4+(.5*Math.random())};
-    this.exists = Math.random() < .40;
+    this.exists = Math.random() < .4;
     // this.moveStartTime = Date.now() + Math.random() * 2000; // Initial random movement duration
   }
 
@@ -50,6 +56,7 @@ class Orb {
       ctx.globalAlpha=this.opacity;
       ctx.arc(this.x, this.y, orbSize, 0, Math.PI * 2);
       ctx.fillStyle = this.color;
+      //ctx.fillRect(this.x, this.y, orbSize, orbSize);
       ctx.fill();
       ctx.closePath();
     }

@@ -19,12 +19,13 @@
       <!-- Navb -->
       <div class="drop">
         <input type="checkbox" id="touch" >
-      <label for="touch" class="fa fa-bars label fadein" style="font-size: 40px;"></label>
+
+        <label for="touch" class="fa fa-bars label fadein" style="font-size: 40px;"></label>
         <div class="slide">
-          <a href="research.html">Research & Projects</a>          
+          <a href="projects.html">Research</a>          
+          <a href="publications.html">Publications</a>
           <input type="checkbox" id="touch">
-          <label for="touch" onclick="location.href='#scroll'"><a>About</a>
-          </label>
+          <label for="touch" onclick="location.href='#scroll'"><a>About</a></label>
           <input type="checkbox" id="touch">
           <label for="touch" onclick="location.href='#home'">
             <a><i class="fa fa-home" style="font-size: 30px;"></i></a>
@@ -36,7 +37,7 @@
       <!-- Header -->
       <div style="position: absolute; z-index:1; ">
           <span style="display:inline-block;" class="title"><anim-grad>Quantum Information</anim-grad><anim> and </anim>
-            <anim-grad>Error Correction</anim-grad><anim> with Ultracold Atoms</anim></span>
+            <anim-grad>Error Correction</anim-grad><anim> with Trapped Ions</anim></span>
       </div>
 
       <!-- Animation -->
@@ -48,31 +49,38 @@
   </div>
   <div class="wrapper" id="scroll">
     <!-- Navb -->
-    <div class="content">
 
       <!--img src="" alt="" class="pic"-->
-      <div>
-        <h1 class="biobar">About Davis Clarke &nbsp &nbsp</h1>
-        <p class="biopage">I am an independent researcher that is broadly interested in neutral atoms, quantum information science, 
-          and quantum error correction. My research includes work on exploring hardware-efficient implementations of 
-          various quantum algorithms (espescially quantum variational and ground-state eigensolvers), and 
-          harnessing quantum networks for quantum computing.
-        </p>
-        <div class="bio">
-          <h2 style="text-decoration: underline;">Contact</h2>
-          <p> 
-            Email: clarked126 [at] gmail.com<br />
+        
+    <div class="intro_container">
+      <div class="bioimg biobar" style="color: snow;"><img src="./img/Me.jpg"></div>
+      <div class="left">
+          <h1 class="biobar">About Davis Clarke &nbsp</h1>
+          <p class="biopage">I am an independent researcher that is broadly interested in trapped ions, quantum information science, 
+            and quantum error correction. My research includes work on exploring hardware-efficient implementations of 
+            various quantum algorithms (especially quantum variational and ground-state eigensolvers), and 
+            quantum error correction schemes (especially surface codes).
+            <br /><br />
+            <a href="resume.pdf" class="resume">My Resume</a><br />
+            Email: clarked126@gmail.com<br />
             Cell: (919)-987-5300<br />
-            <a href=""><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 30px; color: snow;"></i></a>
+            <a href="https://www.linkedin.com/in/davisclarke/" ><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 30px; color: snow;"></i></a>
             <a href="https://github.com/davisclarke"><i class="fa fa-github" aria-hidden="true" style="font-size: 30px; color: snow;"></i></a> <br />
           </p>
-        </div>
-        <br />
+
+      
+          </div>
+      <div class="more">
+        <p class="clickme" ><a href="projects.html"><i class="fa fa-angle-right" aria-hidden="true" ></i>&nbsp Projects</a></p><br />
+        <p class="clickme"><a href="publications.html" style="margin-bottom: 5vh;"><i class="fa fa-angle-right" aria-hidden="true" ></i>&nbsp Publications</a></p>
       </div>
-      <div class="bio">        
-        <h1 class="biobar">Publications</h1>
+
         <br />
-      </div>
+      <!--<div class="bio">        
+
+        <br />
+      </div>-->
+
     </div>
   <!-- Content -->
 </body>
