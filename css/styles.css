@@ -350,6 +350,12 @@ p.biopage {
 
 
 @media only screen and (max-width: 480px){ 
+    canvas.info {
+        mask:
+            transparent;
+        -webkit-mask:
+            transparent;
+    }
     .wrapper {
         overflow: unset;
     }
