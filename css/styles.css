@@ -17,9 +17,9 @@ canvas {
 canvas.info {
     display: block;
     mask:
-        linear-gradient(235deg, rgba(14, 17, 17,0) 85%, rgba(14, 17, 17,1) 100%);
+        linear-gradient(0deg, rgba(14, 17, 17,0) 80%, rgba(14, 17, 17,.5) 100%);
     -webkit-mask:
-        linear-gradient(235deg, rgba(14, 17, 17,0) 85%, rgba(14, 17, 17,1) 100%);
+        linear-gradient(0deg, rgba(14, 17, 17,0) 80%, rgba(14, 17, 17,.5) 100%);
 }
 
 .intro {
