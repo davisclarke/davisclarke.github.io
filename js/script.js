@@ -7,7 +7,7 @@ canvas.height = window.innerHeight;
 const gridSize = 20; // Adjust this for the desired grid size
 const orbSize =4; // Adjust this for the desired orb size
 const orbs = [];
-color='#ec5729'
+const colors=['snow','#3d5dff']
 //color=`#fffafa`
 function makeCircle(x, y, size, color, alpha) {
   canvas.beginPath();
@@ -66,7 +66,8 @@ class Orb {
 // Create grid of orbs
 for (let x = gridSize / 2; x < canvas.width; x += gridSize) {
   for (let y = gridSize / 2; y < canvas.height; y += gridSize) {
-    orbs.push(new Orb(x, y, color));
+
+    orbs.push(new Orb(x, y, colors[Math.floor(Math.random() * colors.length)]));
   }
 }
 

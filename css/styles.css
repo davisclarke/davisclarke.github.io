@@ -9,9 +9,9 @@ body { position: absolute; }
 
 canvas {
     display: block;
-    -webkit-mask:linear-gradient(170deg, rgba(14, 17, 17,0) 50%, rgba(14, 17, 17,1) 100%);
+    -webkit-mask:linear-gradient(180deg, rgba(14, 17, 17,0) 50%, rgba(14, 17, 17,1) 90%, rgba(14, 17, 17,0) 100%);
     
-    mask:linear-gradient(170deg, rgba(14, 17, 17,0) 50%, rgba(14, 17, 17,1) 100%);
+    mask:linear-gradient(180deg, rgba(14, 17, 17,0) 50%, rgba(14, 17, 17,1) 90%, rgba(14, 17, 17,0) 100%);
   }
 
 canvas.info {
@@ -101,7 +101,7 @@ span.title {
 }
 
 span anim-grad {
-  background: linear-gradient(30deg, #ec5729 0%, rgba(151,236,41,1) 40%, #3d5dff 95%);
+  background: linear-gradient(30deg, #ec5729 0%, #97ec29 40%, #3d5dff 95%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -125,18 +125,6 @@ span anim-grad {
     grid-auto-rows: minmax(100px, auto);
 }
 
-/*
-.anim-grad.second {
-    opacity: 0;
-    animation-delay: 4s;
-    animation-duration: 12s;
-}
-
-.anim-grad.third {
-    opacity: 0;
-    animation-delay: 8s;
-    animation-duration: 12s;
-}*/
 
 h3 { font-family: monaco, Consolas, 
         "Lucida Console", monospace; font-size: 14px; font-style: normal; 
@@ -159,53 +147,6 @@ pre { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 13p
     margin-top: 2%;
     margin-left: 55vw;
     animation: fadein 1.2s ease-in;
-}
-                                         
-.topnav a {
-    color: snow;
-    text-decoration:none;
-    margin-left: .75%;
-    margin-right: .75%;
-    padding-bottom: .2vh;
-    border-bottom: 6px solid;
-    border-bottom-color: snow;
-    font-size: 30px;
-    display: inline; 
-    transition: all .5s ease-out;
-} 
-
-.topnav a:hover {
-    color: #D84315;
-    border-bottom-color: #D84315;
-}
-
-.topnav ul {
-    float: left;
-    font-size: 24px;
-    color: snow;
-    font-style: normal;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-}
-
-.topnav a.home {
-    text-decoration:none;
-    margin-left: 1%;
-    margin-right: 1%;
-    padding-bottom: .2vh;
-    border-bottom: 6px solid;
-    font-size: 30px;
-    display: inline; 
-    background: linear-gradient(30deg, #ec5729 0%, rgba(151,236,41,1) 40%, #3d5dff 95%);
-    color: snow;
-    background-clip: text;
-    -webkit-background-clip: text;
-    transition: all ease-out .5s;
-}
-.topnav a.home:hover {
-  color: transparent;
-  border-bottom-color: #D84315;
 }
 
 .wrapper {
